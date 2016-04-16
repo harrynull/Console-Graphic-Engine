@@ -32,7 +32,7 @@ public:
 	{
 		if (x > _w || y > _h) throw Bad_Arg();
 		unsigned char* buffer = _buffer.get();
-		buffer += y*getW() * 3;
+		buffer += (y*getW() + x) * 3;
 		return Color{ *buffer,*(buffer + 1),*(buffer + 2) };
 	}
 
@@ -40,7 +40,7 @@ public:
 	{
 		if (x > _w || y > _h) throw Bad_Arg();
 		unsigned char* buffer = _buffer.get();
-		buffer += y*getW() * 3;
+		buffer += (y*getW() + x) * 3;
 		*buffer = c.r;
 		*(buffer + 1) = c.g;
 		*(buffer + 2) = c.b;

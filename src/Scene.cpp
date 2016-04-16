@@ -34,9 +34,14 @@ void Scene::flush()
 	{
 		for (int x = 0; x != buffer.getW(); x++)
 		{
-			if (buffer.getPixel(x, y).r != 0)
+			if (buffer.getPixel(x, y).r != 0) {
 				Console::print("*");
+			}
+			else
+			{
+				if (y != buffer.getH() - 1 || x != buffer.getW() - 1)
+					Console::print(" ");
+			}
 		}
-		Console::print("\n");
 	}
 }

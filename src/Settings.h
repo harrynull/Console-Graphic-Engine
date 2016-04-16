@@ -5,7 +5,7 @@ extern int resolutionW;
 extern int resolutionH;
 
 void initCheck(bool checkInited = true);
-bool initCGE(int resW = 25, int resH = 80);
+bool initCGE(int resW = 80, int resH = 25);
 
 ///在未初始化就调用时抛出的异常
 struct NOT_INITED_YET {};
