@@ -151,12 +151,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Console_Windows.cpp" />
+    <ClCompile Include="..\src\Rectangle.cpp" />
+    <ClCompile Include="..\src\Scene.cpp" />
     <ClCompile Include="..\src\Settings.cpp" />
     <ClCompile Include="..\test\test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\CGE.h" />
+    <ClInclude Include="..\src\Color.h" />
     <ClInclude Include="..\src\Console.h" />
+    <ClInclude Include="..\src\DisplayBuffer.h" />
+    <ClInclude Include="..\src\Exceptions.h" />
+    <ClInclude Include="..\src\Graphic.h" />
+    <ClInclude Include="..\src\Graphics.h" />
+    <ClInclude Include="..\src\Rectangle.h" />
     <ClInclude Include="..\src\Scene.h" />
     <ClInclude Include="..\src\Settings.h" />
   </ItemGroup>

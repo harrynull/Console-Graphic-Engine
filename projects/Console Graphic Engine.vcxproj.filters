@@ -10,6 +10,9 @@
     <Filter Include="Src\Console">
       <UniqueIdentifier>{1528ccdd-4480-443c-8d34-0568e4416673}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Graphics">
+      <UniqueIdentifier>{14f3e07e-2323-4027-942c-35ad7a4fcce6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\test.cpp">
@@ -19,6 +22,12 @@
       <Filter>Src\Console</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Settings.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Rectangle.cpp">
+      <Filter>Src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Scene.cpp">
       <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -34,6 +43,24 @@
     </ClInclude>
     <ClInclude Include="..\src\Console.h">
       <Filter>Src\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Graphic.h">
+      <Filter>Src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DisplayBuffer.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Graphics.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Rectangle.h">
+      <Filter>Src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Color.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Exceptions.h">
+      <Filter>Src</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
