@@ -24,13 +24,15 @@ public:
 	* 6 7 8
 	*/
 	DisplayBuffer(int w, int h)
-		:_w(w), _h(h), _buffer(new unsigned char[w*h*3]) {};
+		:_w(w), _h(h), _buffer(new unsigned char[w*h * 3]) {
+		memset(_buffer.get(), 0, sizeof(unsigned char)*w*h * 3);
+	};
 
 	const Color getPixel(int x, int y) const
 	{
 		if (x > _w || y > _h) throw Bad_Arg();
 		unsigned char* buffer = _buffer.get();
-		buffer += y*_w * 3;
+		buffer += y*getW() * 3;
 		return Color{ *buffer,*(buffer + 1),*(buffer + 2) };
 	}
 
@@ -38,11 +40,13 @@ public:
 	{
 		if (x > _w || y > _h) throw Bad_Arg();
 		unsigned char* buffer = _buffer.get();
-		buffer += y*_w * 3;
+		buffer += y*getW() * 3;
 		*buffer = c.r;
 		*(buffer + 1) = c.g;
 		*(buffer + 2) = c.b;
 	}
+	int getW() const { return _w; }
+	int getH() const { return _h; }
 private:
 	std::unique_ptr<unsigned char[]> _buffer;
 	int _w, _h;

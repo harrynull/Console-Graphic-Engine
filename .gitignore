@@ -233,3 +233,7 @@ _Pvt_Extensions
 
 # VS Log Files
 *.tlog
+
+# bin files
+*.obj
+*.exe
