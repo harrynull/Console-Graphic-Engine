@@ -11,8 +11,8 @@ public:
 	* @param[in] h 高
 	* @param[in] solid 是否是实心的
 	*/
-	Rectangle(int w, int h, Color color, bool solid = true) noexcept
-		: _w(w), _h(h), _solid(solid), _color(color) {}
+	Rectangle(int w, int h, char displayChar, Color color=getColorFromColorID(White), bool solid = true) noexcept
+		: _w(w), _h(h), _displayChar(displayChar), _color(color), _solid(solid) {}
 	virtual ~Rectangle() {}
 	virtual void draw(DisplayBuffer& buffer) override;
 	virtual void update() override {};
@@ -20,6 +20,7 @@ private:
 	bool _solid;
 	int _w, _h;
 	Color _color;
+	const unsigned char _displayChar;
 };
 
 #endif // Rectangle_h__

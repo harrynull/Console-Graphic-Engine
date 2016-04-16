@@ -21,6 +21,14 @@ public:
 		//printf效率较高
 		printf(std::forward<Ts>(args)...);
 	}
+	/**
+	* @brief 打印单个字符
+	* @param[in] c 要打印的字符
+	*/
+	static void printChar(const unsigned char c)
+	{
+		putchar(c);
+	}
 
 	/**
 	* @brief 设置控制台大小

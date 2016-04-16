@@ -24,7 +24,7 @@ public:
 	* @param[in] Graphic 要加入的Graphic
 	* @param[in] x 要加入的Graphic在屏幕的X位置
 	* @param[in] y 要加入的Graphic在屏幕的Y位置
-	* @param[in] tag 要加入的Graphic的tag(用于查找该Graphic)
+	* @param[in] tag 要加入的Graphic的tag(用于查找该Graphic)，注意同一个Scene中tag不能重复
 	* @note 坐标系向下y+,向右x+,Graphic和Scene的原点都在左上角
 	*/
 	void addGraphic(std::shared_ptr<Graphic>& graphic, int x, int y, std::string tag);

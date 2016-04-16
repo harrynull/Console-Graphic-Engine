@@ -34,12 +34,13 @@ void Scene::flush()
 	{
 		for (int x = 0; x != buffer.getW(); x++)
 		{
-			if (buffer.getPixel(x, y).r != 0) {
-				Console::print("*");
+			auto pixel = buffer.getPixel(x, y);	//获得像素
+			if (pixel.second.r != 0) {
+				Console::printChar(pixel.first);	//打印像素
 			}
 			else
 			{
-				if (y != buffer.getH() - 1 || x != buffer.getW() - 1)
+				if (y != buffer.getH() - 1 || x != buffer.getW() - 1) //最后一个不输出空格
 					Console::print(" ");
 			}
 		}
