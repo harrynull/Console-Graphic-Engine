@@ -1,5 +1,7 @@
 ﻿#ifndef Color_h__
 #define Color_h__
+inline unsigned char operator "" uc(unsigned long long value)
+{ return static_cast<unsigned char>(value); }
 
 struct Color {
 	unsigned char r, g, b;
@@ -11,7 +13,7 @@ inline Color getColorFromColorID(ColorID id)
 {
 	switch (id) {
 	case White:
-		return Color{ (unsigned char)255,(unsigned char)255,(unsigned char)255 };
+		return Color{ 255uc, 255uc, 255uc };
 	case Black:
 	default:
 		return Color{ 0,0,0 };

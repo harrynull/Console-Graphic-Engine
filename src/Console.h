@@ -13,7 +13,7 @@ class Console {
 public:
 	/**
 	* @brief 输出文字到控制台
-	* @param[in] 参数(和printf相同)
+	* @param[in] args 参数(和printf相同)
 	*/
 	template<class... Ts>
 	static void print(Ts&&... args);
