@@ -1,4 +1,4 @@
-#include "Rectangle.h"
+﻿#include "Rectangle.h"
 void Rectangle::draw(DisplayBuffer& buffer)
 {
 	if (!_visibility) return;

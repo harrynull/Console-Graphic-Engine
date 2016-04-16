@@ -1,4 +1,4 @@
-#ifndef DisplayBuffer_h__
+ï»¿#ifndef DisplayBuffer_h__
 #define DisplayBuffer_h__
 #include <memory>
 #include "Exceptions.h"
@@ -6,19 +6,19 @@
 /*!
  * \class DisplayBuffer
  *
- * \brief »æÍ¼»º³åÇø
+ * \brief ç»˜å›¾ç¼“å†²åŒº
  *
  * \author Null
- * \date ËÄÔÂ 2016
+ * \date å››æœˆ 2016
  */
 class DisplayBuffer {
 public:
 	/**
-	* @brief DisplayBufferµÄ¹¹Ôìº¯Êı
-	* @param[in] w ¿í
-	* @param[in] h ¸ß
-	* @note bufferÊÇw*hµÄ3±¶(r,g,b)
-	* ÅÅÁĞ·½Ê½:
+	* @brief DisplayBufferçš„æ„é€ å‡½æ•°
+	* @param[in] w å®½
+	* @param[in] h é«˜
+	* @note bufferæ˜¯w*hçš„3å€(r,g,b)
+	* æ’åˆ—æ–¹å¼:
 	* 0 1 2
 	* 3 4 5
 	* 6 7 8

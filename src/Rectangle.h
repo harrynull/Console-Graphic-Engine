@@ -1,4 +1,4 @@
-#ifndef Rectangle_h__
+ï»¿#ifndef Rectangle_h__
 #define Rectangle_h__
 #include "Graphic.h"
 #include "Color.h"
@@ -6,10 +6,10 @@ class DisplayBuffer;
 class Rectangle : public Graphic {
 public:
 	/**
-	* @brief ¾ØĞÎµÄ¹¹Ôìº¯Êı
-	* @param[in] w ¿í
-	* @param[in] h ¸ß
-	* @param[in] solid ÊÇ·ñÊÇÊµĞÄµÄ
+	* @brief çŸ©å½¢çš„æ„é€ å‡½æ•°
+	* @param[in] w å®½
+	* @param[in] h é«˜
+	* @param[in] solid æ˜¯å¦æ˜¯å®å¿ƒçš„
 	*/
 	Rectangle(int w, int h, Color color, bool solid = true) noexcept
 		: _w(w), _h(h), _solid(solid), _color(color) {}

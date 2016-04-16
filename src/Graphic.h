@@ -1,27 +1,27 @@
-#ifndef Graphic_h__
+ï»¿#ifndef Graphic_h__
 #define Graphic_h__
 class DisplayBuffer;
 /*!
  * \class Graphic
  *
- * \brief ËùÓĞÍ¼ĞÎµÄ»ùÀà
+ * \brief æ‰€æœ‰å›¾å½¢çš„åŸºç±»
  *
  * \author Null
- * \date ËÄÔÂ 2016
+ * \date å››æœˆ 2016
  */
 class Graphic {
 public:
 	virtual ~Graphic() {}
 	/**
-	* @brief »æÍ¼º¯Êı
-	* @param[in] buffer »æÍ¼»º´æÇø£¬Îª»æÍ¼µÄÄ¿±ê
-	* @note ½«»áÔÚupdateº¯ÊıÖ®ºó±»µ÷ÓÃ
+	* @brief ç»˜å›¾å‡½æ•°
+	* @param[in] buffer ç»˜å›¾ç¼“å­˜åŒºï¼Œä¸ºç»˜å›¾çš„ç›®æ ‡
+	* @note å°†ä¼šåœ¨updateå‡½æ•°ä¹‹åè¢«è°ƒç”¨
 	*/
 	virtual void draw(DisplayBuffer& buffer) = 0;
 
 	/**
-	* @brief Ë¢ĞÂº¯Êı
-	* @note Ã¿Ö¡µ÷ÓÃÒ»´Î£¬½«ÔÚdrawº¯ÊıÖ®Ç°±»µ÷ÓÃ
+	* @brief åˆ·æ–°å‡½æ•°
+	* @note æ¯å¸§è°ƒç”¨ä¸€æ¬¡ï¼Œå°†åœ¨drawå‡½æ•°ä¹‹å‰è¢«è°ƒç”¨
 	*/
 	virtual void update() = 0;
 

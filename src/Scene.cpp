@@ -1,4 +1,4 @@
-#include "Scene.h"
+﻿#include "Scene.h"
 #include "Graphic.h"
 
 void Scene::addGraphic(std::shared_ptr<Graphic>& graphic, int x, int y, std::string tag)

@@ -1,4 +1,4 @@
-#ifndef Color_h__
+﻿#ifndef Color_h__
 #define Color_h__
 
 struct Color {
