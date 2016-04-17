@@ -1,6 +1,7 @@
 ﻿#ifndef Console_h__
 #define Console_h__
 #include <stdio.h>
+struct Color;
 /*!
  * \class Console
  *
@@ -41,6 +42,8 @@ public:
 	* @brief 清屏
 	*/
 	static void clear();
+
+	static void setColor(Color foreColor, Color backColor);
 };
 
 #endif // Console_h__

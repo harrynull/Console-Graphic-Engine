@@ -230,6 +230,7 @@ _Pvt_Extensions
 # VS Db Files
 *.VC.db
 *.VC.opendb
+*.idb
 
 # VS Log Files
 *.tlog

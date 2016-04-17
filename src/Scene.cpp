@@ -1,6 +1,7 @@
 ﻿#include "Scene.h"
 #include "Graphic.h"
 #include "Console.h"
+#include "Color.h"
 
 void Scene::addGraphic(std::shared_ptr<Graphic>& graphic, int x, int y, std::string tag)
 {
@@ -34,14 +35,10 @@ void Scene::flush()
 	{
 		for (int x = 0; x != buffer.getW(); x++)
 		{
-			auto pixel = buffer.getPixel(x, y);	//获得像素
-			if (pixel.second.r != 0) {
+			if (y != buffer.getH() - 1 || x != buffer.getW() - 1) {
+				auto pixel = buffer.getPixel(x, y);	//获得像素
+				Console::setColor(pixel.second, getColorFromColorID(Black));
 				Console::printChar(pixel.first);	//打印像素
-			}
-			else
-			{
-				if (y != buffer.getH() - 1 || x != buffer.getW() - 1) //最后一个不输出空格
-					Console::print(" ");
 			}
 		}
 	}
