@@ -2,6 +2,7 @@
 #include "Graphic.h"
 #include "Console.h"
 #include "Color.h"
+#include "DisplayBuffer.h"
 
 void Scene::addGraphic(std::shared_ptr<Graphic>& graphic, int x, int y, std::string tag)
 {
@@ -37,8 +38,8 @@ void Scene::flush()
 		{
 			if (y != buffer.getH() - 1 || x != buffer.getW() - 1) {
 				auto pixel = buffer.getPixel(x, y);	//获得像素
-				Console::setColor(pixel.second, getColorFromColorID(Black));
-				Console::printChar(pixel.first);	//打印像素
+				Console::setColor(pixel.foreColor, pixel.backColor);
+				Console::printChar(pixel.ch);	//打印像素
 			}
 		}
 	}

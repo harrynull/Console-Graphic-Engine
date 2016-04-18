@@ -4,10 +4,13 @@ inline unsigned char operator "" _uc(unsigned long long value)
 { return static_cast<unsigned char>(value); }
 
 struct Color {
+	Color(unsigned char _r, unsigned char _g, unsigned char _b, bool _trans = false) :
+		r(_r), g(_g), b(_b), transparent(_trans) {}
 	unsigned char r, g, b;
+	bool transparent;
 };
 
-enum ColorID { Black, White, Red, Green, Blue };
+enum ColorID { Black, White, Red, Green, Blue, Transparent };
 
 inline Color getColorFromColorID(ColorID id)
 {
@@ -20,6 +23,8 @@ inline Color getColorFromColorID(ColorID id)
 		return Color{ 0, 255_uc, 0 };
 	case Blue:
 		return Color{ 0, 0, 255_uc };
+	case Transparent:
+		return Color(0, 0, 0, true);
 	case Black:
 	default:
 		return Color{ 0,0,0 };
