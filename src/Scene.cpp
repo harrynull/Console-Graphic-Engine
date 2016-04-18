@@ -4,25 +4,27 @@
 #include "Color.h"
 #include "DisplayBuffer.h"
 
-void Scene::addGraphic(std::shared_ptr<Graphic>& graphic, int x, int y, std::string tag)
+void Scene::addGraphic(std::shared_ptr<Graphic>& graphic, int x, int y, int layer, std::string tag)
 {
 	graphic->setX(x);
 	graphic->setY(y);
-	_graphics[tag] = graphic;
+	graphic->setTag(tag);
+	_graphics.insert({ layer,std::move(graphic) });
 }
 
-void Scene::addGraphic(std::shared_ptr<Graphic>&& graphic, int x, int y, std::string tag)
+void Scene::addGraphic(std::shared_ptr<Graphic>&& graphic, int x, int y, int layer, std::string tag)
 {
 	graphic->setX(x);
 	graphic->setY(y);
-	_graphics[tag] = std::move(graphic);
+	_graphics.insert({ layer,std::move(graphic) });
 }
 
 std::shared_ptr<Graphic> Scene::getGraphicByTag(const std::string& tag)
 {
-	auto iter = _graphics.find(tag);
-	if (iter == _graphics.end()) return nullptr;
-	return iter->second;
+	for (const auto& g : _graphics) {
+		if (g.second->getTag() == tag) return g.second;
+	}
+	return nullptr;
 }
 
 void Scene::flush()

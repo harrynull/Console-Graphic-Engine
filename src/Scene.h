@@ -25,10 +25,11 @@ public:
 	* @param[in] x 要加入的Graphic在屏幕的X位置
 	* @param[in] y 要加入的Graphic在屏幕的Y位置
 	* @param[in] tag 要加入的Graphic的tag(用于查找该Graphic)，注意同一个Scene中tag不能重复
+	* @param[in] layer 要加入的Graphic的layer, layer大的图形可以覆盖layer小的图形, 相同layer的图形的覆盖顺序无定义
 	* @note 坐标系向下y+,向右x+,Graphic和Scene的原点都在左上角
 	*/
-	void addGraphic(std::shared_ptr<Graphic>& graphic, int x, int y, std::string tag);
-	void addGraphic(std::shared_ptr<Graphic>&& graphic, int x, int y, std::string tag);
+	void addGraphic(std::shared_ptr<Graphic>& graphic, int x, int y, int layer = 0, std::string tag = "");
+	void addGraphic(std::shared_ptr<Graphic>&& graphic, int x, int y, int layer = 0, std::string tag = "");
 
 	/**
 	* @brief 查找一个Graphic
@@ -44,7 +45,7 @@ public:
 
 private:
 	DisplayBuffer buffer;
-	std::map<std::string, std::shared_ptr<Graphic>> _graphics;
+	std::multimap<int, std::shared_ptr<Graphic>> _graphics;
 	Scene() :buffer(resolutionW, resolutionH) {};
 };
 

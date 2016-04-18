@@ -1,5 +1,6 @@
 ﻿#ifndef Graphic_h__
 #define Graphic_h__
+#include <string>
 class DisplayBuffer;
 /*!
  * \class Graphic
@@ -29,10 +30,13 @@ public:
 	void setX(int val) { _x = val; }
 	int getY() const { return _y; }
 	void setY(int val) { _y = val; }
+	std::string getTag() const { return _tag; }
+	void setTag(std::string val) { _tag = val; }
 	bool getVisibility() const { return _visibility; }
 	void setVisibility(bool vis) { _visibility = vis; }
 
 protected:
+	std::string _tag;
 	int _x, _y;
 	bool _visibility = true;
 };
