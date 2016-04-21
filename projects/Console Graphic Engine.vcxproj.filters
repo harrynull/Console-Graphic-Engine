@@ -30,6 +30,12 @@
     <ClCompile Include="..\src\Scene.cpp">
       <Filter>Src</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Textbox.cpp">
+      <Filter>Src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GraphicsGroup.cpp">
+      <Filter>Src\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Scene.h">
@@ -61,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="..\src\Exceptions.h">
       <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Textbox.h">
+      <Filter>Src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GraphicsGroup.h">
+      <Filter>Src\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

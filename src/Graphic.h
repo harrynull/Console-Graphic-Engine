@@ -1,6 +1,7 @@
 ﻿#ifndef Graphic_h__
 #define Graphic_h__
 #include <string>
+#include <functional>
 class DisplayBuffer;
 /*!
  * \class Graphic
@@ -25,6 +26,9 @@ public:
 	* @note 每帧调用一次，将在draw函数之前被调用
 	*/
 	virtual void update() = 0;
+
+	using Action = std::function<void(Graphic&)>;
+	void doAction(Action action) { action(*this); }
 
 	int getX() const { return _x; }
 	void setX(int val) { _x = val; }

@@ -16,6 +16,7 @@ void Scene::addGraphic(std::shared_ptr<Graphic>&& graphic, int x, int y, int lay
 {
 	graphic->setX(x);
 	graphic->setY(y);
+	graphic->setTag(tag);
 	_graphics.insert({ layer,std::move(graphic) });
 }
 

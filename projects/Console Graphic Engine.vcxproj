@@ -151,9 +151,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Console_Windows.cpp" />
+    <ClCompile Include="..\src\GraphicsGroup.cpp" />
     <ClCompile Include="..\src\Rectangle.cpp" />
     <ClCompile Include="..\src\Scene.cpp" />
     <ClCompile Include="..\src\Settings.cpp" />
+    <ClCompile Include="..\src\Textbox.cpp" />
     <ClCompile Include="..\test\test.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -164,9 +166,11 @@
     <ClInclude Include="..\src\Exceptions.h" />
     <ClInclude Include="..\src\Graphic.h" />
     <ClInclude Include="..\src\Graphics.h" />
+    <ClInclude Include="..\src\GraphicsGroup.h" />
     <ClInclude Include="..\src\Rectangle.h" />
     <ClInclude Include="..\src\Scene.h" />
     <ClInclude Include="..\src\Settings.h" />
+    <ClInclude Include="..\src\Textbox.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
