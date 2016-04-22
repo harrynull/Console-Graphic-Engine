@@ -31,7 +31,7 @@ public:
 	*/
 	DisplayBuffer(int w, int h)
 		:_w(w), _h(h), _buffer(new unsigned char[w*h * 7]) {
-		memset(_buffer.get(), 0, sizeof(unsigned char)*w*h * 7);
+		clear();
 	};
 	const PixelData getPixel(int x, int y) const
 	{
@@ -43,6 +43,7 @@ public:
 	void setPixel(int x, int y, Color fore, Color back, unsigned char ch)
 	{
 		unsigned char* buffer = getPixelPos(x, y);
+		if (!buffer) return;
 		*buffer = ch;
 		if (!fore.transparent) {
 			*(buffer + 1) = fore.r;
@@ -60,6 +61,7 @@ public:
 	{
 		if (fore.transparent) return; //如果是颜色是透明的，不做任何修改
 		unsigned char* buffer = getPixelPos(x, y);
+		if (!buffer) return;
 		*(buffer + 1) = fore.r;
 		*(buffer + 2) = fore.g;
 		*(buffer + 3) = fore.b;
@@ -68,6 +70,7 @@ public:
 	{
 		if (back.transparent) return; //如果是颜色是透明的，不做任何修改
 		unsigned char* buffer = getPixelPos(x, y);
+		if (!buffer) return;
 		*(buffer + 4) = back.r;
 		*(buffer + 5) = back.g;
 		*(buffer + 6) = back.b;
@@ -77,23 +80,39 @@ public:
 		*getPixelPos(x, y) = ch;
 	}
 	
+	void clear() {
+		memset(_buffer.get(), 0, sizeof(unsigned char)*_w*_h * 7);
+	}
+
 	int getW() const { return _w; }
 	int getH() const { return _h; }
+	int getOffsetX() const { return _offsetX; }
+	int getOffsetY() const { return _offsetY; }
+	void setOffset(int x, int y) { _offsetX = x; _offsetY = y; }
 
 private:
 	unsigned char* getPixelPos(int x, int y)
 	{
-		if (x > _w || y > _h) throw Bad_Arg();
-		return  _buffer.get() + (y*getW() + x) * 7;
+		extern bool ignoreOutOfBoardDraw;
+		if (x + _offsetX >= _w || y + _offsetY >= _h) {
+			if (!ignoreOutOfBoardDraw) throw Bad_Arg();
+			else return nullptr;
+		}
+		return  _buffer.get() + ((y + _offsetY)*getW() + x + _offsetX) * 7;
 	}
 	const unsigned char* getPixelPos(int x, int y) const
 	{
-		if (x > _w || y > _h) throw Bad_Arg();
-		return _buffer.get() + (y*getW() + x) * 7;
+		extern bool ignoreOutOfBoardDraw;
+		if (x + _offsetX >= _w || y + _offsetY >= _h) {
+			if (!ignoreOutOfBoardDraw) throw Bad_Arg();
+			else return nullptr;
+		}
+		return  _buffer.get() + ((y + _offsetY)*getW() + x + _offsetX) * 7;
 	}
 
 	std::unique_ptr<unsigned char[]> _buffer;
 	int _w, _h;
+	int _offsetX, _offsetY;
 };
 
 #endif // DisplayBuffer_h__

@@ -10,17 +10,16 @@ struct Color;
  * \author Null
  * \date 四月 2016
  */
+#include <Windows.h>
 class Console {
 public:
 	/**
 	* @brief 输出文字到控制台
-	* @param[in] args 参数(和printf相同)
+	* @param[in] text 要输出的文字
 	*/
-	template<class... Ts>
-	static void print(Ts&&... args)
+	static void print(const char* text)
 	{
-		//printf效率较高
-		printf(std::forward<Ts>(args)...);
+		puts(text);
 	}
 	/**
 	* @brief 打印单个字符

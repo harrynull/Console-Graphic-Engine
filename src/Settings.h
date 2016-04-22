@@ -3,12 +3,10 @@
 
 extern int resolutionW;
 extern int resolutionH;
+extern bool ignoreOutOfBoardDraw;
 
 void initCheck(bool checkInited = true);
 bool initCGE(int resW = 80, int resH = 25);
+void setIgnoreOutOfBoardDraw(bool isIgnore);
 
-///在未初始化就调用时抛出的异常
-struct NOT_INITED_YET {};
-///在重复初始化时抛出的异常
-struct HAS_INITED_ALREADY {};
 #endif // Settings_h__

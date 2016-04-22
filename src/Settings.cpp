@@ -1,10 +1,10 @@
 ﻿#include "Settings.h"
 #include "Console.h"
-
+#include "Exceptions.h"
 int resolutionW;
 int resolutionH;
 bool initialized = false;
-
+bool ignoreOutOfBoardDraw = true;
 /**
 * @brief 检查初始化状态
 * @param[in] checkInited 预期的初始化状态
@@ -35,4 +35,8 @@ bool initCGE(int resW, int resH)
 	Console::resize(resW, resH);
 	initialized = true;
 	return true;
+}
+
+void setIgnoreOutOfBoardDraw(bool isIgnore) {
+	ignoreOutOfBoardDraw = isIgnore;
 }

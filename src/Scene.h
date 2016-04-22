@@ -41,12 +41,20 @@ public:
 	/**
 	* @brief 刷新显示
 	*/
-	void flush();
+	void reDraw(); ///强行重绘所有显示（可能有闪烁）
+	void flush();  ///只刷新修改部分
+	
+	/**
+	* @brief 获得当前的fps
+	* @return 返回当前的fps
+	*/
+	double getFPS();
 
 private:
 	DisplayBuffer buffer;
 	std::multimap<int, std::shared_ptr<Graphic>> _graphics;
 	Scene() :buffer(resolutionW, resolutionH) {};
+	double fps;
 };
 
 
