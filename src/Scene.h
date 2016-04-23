@@ -3,6 +3,8 @@
 #include <memory>
 #include <string>
 #include <map>
+#include <vector>
+#include "Event.h"
 #include "Settings.h"
 #include "DisplayBuffer.h"
 class Graphic;
@@ -50,9 +52,12 @@ public:
 	*/
 	double getFPS();
 
+	void addEvent(Event e);
+
 private:
 	DisplayBuffer buffer;
 	std::multimap<int, std::shared_ptr<Graphic>> _graphics;
+	std::vector<Event> events;
 	Scene() :buffer(resolutionW, resolutionH) {};
 	double fps;
 };

@@ -28,4 +28,7 @@ void Console::setColor(Color foreColor, Color backColor) {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
 
+void Console::setCursorPos(short x, short y) {
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { x,y });
+}
 #endif

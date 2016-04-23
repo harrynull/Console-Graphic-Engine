@@ -4,6 +4,12 @@ inline unsigned char operator "" _uc(unsigned long long value)
 { return static_cast<unsigned char>(value); }
 
 struct Color {
+	bool operator==(const Color& other) const {
+		return other.r == r&&other.g == g&&other.b == b&&other.transparent == transparent;
+	}
+	bool operator!=(const Color& other) const {
+		return !(other == *this);
+	}
 	Color(unsigned char _r, unsigned char _g, unsigned char _b, bool _trans = false) :
 		r(_r), g(_g), b(_b), transparent(_trans) {}
 	unsigned char r, g, b;

@@ -163,6 +163,7 @@
     <ClInclude Include="..\src\Color.h" />
     <ClInclude Include="..\src\Console.h" />
     <ClInclude Include="..\src\DisplayBuffer.h" />
+    <ClInclude Include="..\src\Event.h" />
     <ClInclude Include="..\src\Exceptions.h" />
     <ClInclude Include="..\src\Graphic.h" />
     <ClInclude Include="..\src\Graphics.h" />

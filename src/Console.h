@@ -42,7 +42,19 @@ public:
 	*/
 	static void clear();
 
+	/**
+	* @brief 设置颜色
+	* @param[in] foreColor 前景色
+	* @param[in] backColor 背景色
+	*/
 	static void setColor(Color foreColor, Color backColor);
+
+	/**
+	* @brief 设置光标位置
+	* @param[in] x x位置
+	* @param[in] y y位置
+	*/
+	static void setCursorPos(short x, short y);
 };
 
 #endif // Console_h__

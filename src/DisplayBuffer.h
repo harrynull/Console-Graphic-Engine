@@ -6,6 +6,12 @@
 #include "Exceptions.h"
 #include "Color.h"
 struct PixelData {
+	bool operator==(const PixelData& other) const {
+		return other.ch == ch&&other.foreColor == foreColor&&other.backColor == backColor;
+	}
+	bool operator!=(const PixelData& other) const {
+		return !(other == *this);
+	}
 	const unsigned char ch;
 	Color foreColor, backColor;
 };
@@ -33,6 +39,13 @@ public:
 		:_w(w), _h(h), _buffer(new unsigned char[w*h * 7]) {
 		clear();
 	};
+
+	DisplayBuffer clone() {
+		DisplayBuffer db(_w, _h);
+		memcpy(db._buffer.get(), _buffer.get(), sizeof(unsigned char)*_w*_h * 7);
+		return db;
+	}
+
 	const PixelData getPixel(int x, int y) const
 	{
 		const unsigned char* buffer = getPixelPos(x, y);

@@ -4,4 +4,5 @@
 #include "Scene.h"
 #include "Graphics.h"
 #include "Color.h"
+#include "Event.h"
 #endif // CGE_h__
