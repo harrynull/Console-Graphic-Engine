@@ -14,6 +14,12 @@ struct PixelData {
 	}
 	const unsigned char ch;
 	Color foreColor, backColor;
+#ifdef _WIN32
+	int getColorFlag()
+	{
+		return foreColor.getColorFlag(false) | backColor.getColorFlag(true);
+	}
+#endif
 };
 /*!
  * \class DisplayBuffer
@@ -95,6 +101,11 @@ public:
 	
 	void clear() {
 		memset(_buffer.get(), 0, sizeof(unsigned char)*_w*_h * 7);
+	}
+
+	const unsigned char* getBuffer()
+	{
+		return _buffer.get();
 	}
 
 	int getW() const { return _w; }

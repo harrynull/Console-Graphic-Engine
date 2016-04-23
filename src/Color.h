@@ -14,6 +14,15 @@ struct Color {
 		r(_r), g(_g), b(_b), transparent(_trans) {}
 	unsigned char r, g, b;
 	bool transparent;
+#ifdef _WIN32
+	int getColorFlag(bool isBackground){
+		int colorFlag = 0;
+		if (r > 128) colorFlag |= isBackground ? 0x0040 : 0x0004;
+		if (g > 128) colorFlag |= isBackground ? 0x0020 : 0x0002;
+		if (b > 128) colorFlag |= isBackground ? 0x0010 : 0x0001;
+		return colorFlag;
+	}
+#endif
 };
 
 enum ColorID { Black, White, Red, Green, Blue, Transparent };

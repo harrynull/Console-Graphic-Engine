@@ -2,6 +2,8 @@
 #define Console_h__
 #include <stdio.h>
 struct Color;
+struct PixelData;
+class DisplayBuffer;
 /*!
  * \class Console
  *
@@ -10,7 +12,6 @@ struct Color;
  * \author Null
  * \date 四月 2016
  */
-#include <Windows.h>
 class Console {
 public:
 	/**
@@ -29,6 +30,17 @@ public:
 	{
 		putchar(c);
 	}
+	/**
+	* @brief 打印单个像素
+	* @param[in] pixel 要打印的像素
+	*/
+	static void printPixel(PixelData pixel, int x, int y);
+
+	/**
+	* @brief 显示buffer内的内容
+	* @param[in] buffer 要显示的DisplayBuffer
+	*/
+	static void printDisplayBuffer(const DisplayBuffer& buffer);
 
 	/**
 	* @brief 设置控制台大小
@@ -55,6 +67,12 @@ public:
 	* @param[in] y y位置
 	*/
 	static void setCursorPos(short x, short y);
+
+	/**
+	* @brief 显示隐藏光标
+	* @param[in] show 是否显示光标
+	*/
+	static void setCursorShow(bool show);
 };
 
 #endif // Console_h__

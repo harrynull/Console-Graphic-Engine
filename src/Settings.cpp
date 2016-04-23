@@ -33,10 +33,17 @@ bool initCGE(int resW, int resH)
 	resolutionW = resW;
 	resolutionH = resH;
 	Console::resize(resW, resH);
+	setCursorDisplay(false);
 	initialized = true;
 	return true;
 }
 
 void setIgnoreOutOfBoardDraw(bool isIgnore) {
 	ignoreOutOfBoardDraw = isIgnore;
+}
+
+
+void setCursorDisplay(bool display)
+{
+	Console::setCursorShow(display);
 }
