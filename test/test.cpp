@@ -1,6 +1,6 @@
 #include "..\src\CGE.h"
+#include "..\src\Console.h"
 #include <memory>
-#include <conio.h>
 #include <sstream>
 int main()
 {
@@ -11,10 +11,16 @@ int main()
 	g->add(std::make_shared<Rectangle>(40, 3, '*', getColorFromColorID(Green), getColorFromColorID(Blue)), 3, 5, 1);
 	g->add(std::make_shared<Rectangle>(80, 25, '#', getColorFromColorID(Blue), getColorFromColorID(Transparent), false), 0, 0, 1);
 	g->add(std::make_shared<Textbox>("Test1", Textbox::FillWidth), 12, 12, 3, "fps");
-	g->add(std::make_shared<Textbox>("Test000000000002", 5, getColorFromColorID(Green)), 12, 16, 3);
+	g->add(std::make_shared<InputBox>(5, false, -1, getColorFromColorID(Green)), 2, 2, 3);
 	mainScene->addGraphic(g, 0, 0, 0, "g");
-	mainScene->addEvent(Event([&]()->bool {	
-		g->getGraphicByTag("test")->setX(g->getGraphicByTag("test")->getX() + 1);
+	mainScene->addEvent(Event([&]()->bool {
+		switch (Console::getchar()) {
+		case 'w':g->getGraphicByTag("test")->setY(g->getGraphicByTag("test")->getY() - 1); break;
+		case 'a':g->getGraphicByTag("test")->setX(g->getGraphicByTag("test")->getX() - 1); break;
+		case 's':g->getGraphicByTag("test")->setY(g->getGraphicByTag("test")->getY() + 1); break;
+		case 'd':g->getGraphicByTag("test")->setX(g->getGraphicByTag("test")->getX() + 1); break;
+		}
+		
 		return false;
 	}));
 	while (true)
@@ -24,5 +30,4 @@ int main()
 		((Textbox*)g->getGraphicByTag("fps").get())->setText(ss.str());
 		mainScene->flush();
 	}
-	_getch();
 }

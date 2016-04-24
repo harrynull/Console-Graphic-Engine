@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <sstream>
 #include <Windows.h>
+#include <conio.h>
 #include "Color.h"
 #include "DisplayBuffer.h"
 void Console::resize(int w, int h)
@@ -59,5 +60,12 @@ void Console::printPixel(PixelData pixel, int x, int y)
 	GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 	SMALL_RECT sr{ (short)x,(short)y,(short)x + 1,(short)y + 1 };
 	WriteConsoleOutput(GetStdHandle(STD_OUTPUT_HANDLE), cinfo, { (short)1,(short)1 }, { 0,0 }, &sr);
+}
+char Console::getchar()
+{
+	if (_kbhit())
+		return _getch();
+	else
+		return 0;
 }
 #endif

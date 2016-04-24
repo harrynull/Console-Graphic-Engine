@@ -118,7 +118,7 @@ private:
 	unsigned char* getPixelPos(int x, int y)
 	{
 		extern bool ignoreOutOfBoardDraw;
-		if (x + _offsetX >= _w || y + _offsetY >= _h) {
+		if (x + _offsetX >= _w || y + _offsetY >= _h || x < 0 || y < 0) {
 			if (!ignoreOutOfBoardDraw) throw Bad_Arg();
 			else return nullptr;
 		}
@@ -127,7 +127,7 @@ private:
 	const unsigned char* getPixelPos(int x, int y) const
 	{
 		extern bool ignoreOutOfBoardDraw;
-		if (x + _offsetX >= _w || y + _offsetY >= _h) {
+		if (x + _offsetX >= _w || y + _offsetY >= _h || x < 0 || y < 0) {
 			if (!ignoreOutOfBoardDraw) throw Bad_Arg();
 			else return nullptr;
 		}

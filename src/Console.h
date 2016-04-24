@@ -73,6 +73,13 @@ public:
 	* @param[in] show 是否显示光标
 	*/
 	static void setCursorShow(bool show);
+
+	/**
+	* @brief 无回显无缓冲非堵塞地从控制台读取一个字符
+	* @return 读取到的字符
+	* @note 如果调用时无输入字符，则返回0
+	*/
+	static char getchar();
 };
 
 #endif // Console_h__

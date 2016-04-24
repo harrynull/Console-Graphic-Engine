@@ -36,6 +36,9 @@
     <ClCompile Include="..\src\GraphicsGroup.cpp">
       <Filter>Src\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\InputBox.cpp">
+      <Filter>Src\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Scene.h">
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="..\src\Event.h">
       <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\InputBox.h">
+      <Filter>Src\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

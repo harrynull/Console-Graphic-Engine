@@ -9,6 +9,12 @@ void GraphicsGroup::draw(DisplayBuffer & buffer)
 	}
 	buffer.setOffset(0,0);
 }
+void GraphicsGroup::update()
+{
+	for (const auto& g : _graphics) {
+		g.second->update();
+	}
+}
 void GraphicsGroup::add(std::shared_ptr<Graphic>& graphic, int x, int y, int layer, std::string tag)
 {
 	graphic->setX(x);
