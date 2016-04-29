@@ -31,6 +31,14 @@ void GraphicsGroup::add(std::shared_ptr<Graphic>&& graphic, int x, int y, int la
 	_graphics.insert({ layer,std::move(graphic) });
 }
 
+void GraphicsGroup::bind(Scene * s) {
+	_parentScene = s;
+
+	for (const auto& g : _graphics) {
+		g.second->bind(s);
+	}
+}
+
 std::shared_ptr<Graphic> GraphicsGroup::getGraphicByTag(const std::string& tag)
 {
 	for (const auto& g : _graphics) {

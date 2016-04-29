@@ -19,19 +19,3 @@ void InputBox::draw(DisplayBuffer& buffer)
 		}
 	}
 }
-
-void InputBox::update()
-{
-	char ch = Console::getchar();
-	switch (ch) {
-	case '\r':
-		if (_multiLines) _text += ch;
-		break;
-	case '\b':
-		if(_text.size()!=0) _text.erase(_text.end() - 1);
-		break;
-	default:
-		if (ch != 0 && (_text.size() < _maxLength||_maxLength == -1)) _text += ch;
-		break;
-	}
-}

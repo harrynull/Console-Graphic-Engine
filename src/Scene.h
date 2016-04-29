@@ -7,6 +7,7 @@
 #include "Event.h"
 #include "Settings.h"
 #include "DisplayBuffer.h"
+#include "KeyboardEventManager.h"
 class Graphic;
 class Scene {
 public:
@@ -54,10 +55,21 @@ public:
 
 	void addEvent(Event e);
 
+	void addKeyboardEvent(KeyboardEventManager::KeyEvent k, bool monopolize = false, int priority = 0) {
+		kem.bind(k, monopolize, priority);
+	}
+
+	auto getGraphicsBegin() {
+		return _graphics.begin();
+	}
+	auto getGraphicsEnd() {
+		return _graphics.end();
+	}
 private:
 	DisplayBuffer buffer;
 	std::multimap<int, std::shared_ptr<Graphic>> _graphics;
 	std::vector<Event> events;
+	KeyboardEventManager kem;
 	Scene() :buffer(resolutionW, resolutionH) {};
 	double fps;
 };

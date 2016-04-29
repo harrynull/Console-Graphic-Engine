@@ -2,6 +2,7 @@
 #define Graphic_h__
 #include <string>
 #include <functional>
+#include "Scene.h"
 class DisplayBuffer;
 /*!
  * \class Graphic
@@ -27,8 +28,9 @@ public:
 	*/
 	virtual void update() = 0;
 
-	using Action = std::function<void(Graphic&)>;
-	void doAction(Action action) { action(*this); }
+	//using Action = std::function<void(Graphic&)>;
+	//void doAction(Action action) { action(*this); }
+	virtual void bind(Scene* s) { _parentScene = s; }
 
 	int getX() const { return _x; }
 	void setX(int val) { _x = val; }
@@ -38,11 +40,30 @@ public:
 	void setTag(std::string val) { _tag = val; }
 	bool getVisibility() const { return _visibility; }
 	void setVisibility(bool vis) { _visibility = vis; }
+	bool getFocus() const { return _focus; }
+	bool getFocusable() const { return _focusable; }
+	void setFocus(bool focus) {
+		if (!_parentScene) throw NOT_BINDED_YET();
+		if (!_focusable) return;
+		for (auto iter = _parentScene->getGraphicsBegin();
+		iter != _parentScene->getGraphicsEnd(); ++iter) {
+			if (focus)
+			{
+				if (iter->second->_tag != _tag) iter->second->_focus = false;
+				else iter->second->_focus = true;
+			}
+			else {
+				iter->second->_focus = false;
+			}
+		}
+	}
 
 protected:
 	std::string _tag;
 	int _x, _y;
 	bool _visibility = true;
+	bool _focus = false, _focusable = false;
+	Scene* _parentScene;
 };
 
 #endif // Graphic_h__

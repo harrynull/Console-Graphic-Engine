@@ -10,6 +10,7 @@ void Scene::addGraphic(std::shared_ptr<Graphic>& graphic, int x, int y, int laye
 	graphic->setX(x);
 	graphic->setY(y);
 	graphic->setTag(tag);
+	graphic->bind(this);
 	_graphics.insert({ layer,std::move(graphic) });
 }
 
@@ -18,6 +19,7 @@ void Scene::addGraphic(std::shared_ptr<Graphic>&& graphic, int x, int y, int lay
 	graphic->setX(x);
 	graphic->setY(y);
 	graphic->setTag(tag);
+	graphic->bind(this);
 	_graphics.insert({ layer,std::move(graphic) });
 }
 
@@ -34,10 +36,10 @@ void Scene::flush()
 	auto timeBeforeDraw = std::chrono::system_clock::now();
 	auto oldBuffer = buffer.clone();
 	buffer.clear();
-	for (auto iter = events.begin(); iter != events.end();) {
-		if (iter->callback()) iter = events.erase(iter);
-		else ++iter;
+	for (auto callback : events) {
+		callback();
 	}
+	kem.listen(); //监听按键信息
 	for (auto graphic : _graphics) {
 		graphic.second->update();
 		graphic.second->draw(buffer);
@@ -62,9 +64,8 @@ void Scene::reDraw()
 {
 	auto timeBeforeDraw = std::chrono::system_clock::now();
 	buffer.clear();
-	for (auto iter = events.begin(); iter != events.end();) {
-		if (iter->callback()) iter = events.erase(iter);
-		else ++iter;
+	for (auto callback : events) {
+		callback();
 	}
 	for (auto graphic : _graphics) {
 		graphic.second->update();

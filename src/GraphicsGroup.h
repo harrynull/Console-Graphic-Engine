@@ -14,6 +14,7 @@ public:
 	void add(std::shared_ptr<Graphic>& graphic, int x, int y, int layer = 0, std::string tag = "");
 	void add(std::shared_ptr<Graphic>&& graphic, int x, int y, int layer = 0, std::string tag = "");
 
+	virtual void bind(Scene* s) override;
 	/**
 	* @brief 查找一个Graphic
 	* @param[in] tag 要查找的Graphic的tag

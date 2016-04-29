@@ -13,6 +13,15 @@
     <Filter Include="Src\Graphics">
       <UniqueIdentifier>{14f3e07e-2323-4027-942c-35ad7a4fcce6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Event">
+      <UniqueIdentifier>{84e62143-d641-4d41-95ca-da9f90aed44a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Basic">
+      <UniqueIdentifier>{67882141-2960-4a91-be60-7adaf1099dd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Scene">
+      <UniqueIdentifier>{0d2fd59d-6873-401c-8561-8167b5678aa1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\test\test.cpp">
@@ -21,14 +30,8 @@
     <ClCompile Include="..\src\Console_Windows.cpp">
       <Filter>Src\Console</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Settings.cpp">
-      <Filter>Src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Rectangle.cpp">
       <Filter>Src\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\Scene.cpp">
-      <Filter>Src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Textbox.cpp">
       <Filter>Src\Graphics</Filter>
@@ -39,15 +42,18 @@
     <ClCompile Include="..\src\InputBox.cpp">
       <Filter>Src\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\Settings.cpp">
+      <Filter>Src\Basic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Scene.cpp">
+      <Filter>Src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\KeyboardEventManager.cpp">
+      <Filter>Src\Event</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Scene.h">
-      <Filter>Src</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\CGE.h">
-      <Filter>Src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Settings.h">
       <Filter>Src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Console.h">
@@ -56,17 +62,8 @@
     <ClInclude Include="..\src\Graphic.h">
       <Filter>Src\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\DisplayBuffer.h">
-      <Filter>Src</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Rectangle.h">
       <Filter>Src\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Color.h">
-      <Filter>Src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Exceptions.h">
-      <Filter>Src</Filter>
     </ClInclude>
     <ClInclude Include="..\src\Textbox.h">
       <Filter>Src\Graphics</Filter>
@@ -77,11 +74,29 @@
     <ClInclude Include="..\src\Graphics.h">
       <Filter>Src\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Event.h">
-      <Filter>Src</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\InputBox.h">
       <Filter>Src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Event.h">
+      <Filter>Src\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\DisplayBuffer.h">
+      <Filter>Src\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Color.h">
+      <Filter>Src\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Exceptions.h">
+      <Filter>Src\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Settings.h">
+      <Filter>Src\Basic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Scene.h">
+      <Filter>Src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\KeyboardEventManager.h">
+      <Filter>Src\Event</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -153,6 +153,7 @@
     <ClCompile Include="..\src\Console_Windows.cpp" />
     <ClCompile Include="..\src\GraphicsGroup.cpp" />
     <ClCompile Include="..\src\InputBox.cpp" />
+    <ClCompile Include="..\src\KeyboardEventManager.cpp" />
     <ClCompile Include="..\src\Rectangle.cpp" />
     <ClCompile Include="..\src\Scene.cpp" />
     <ClCompile Include="..\src\Settings.cpp" />
@@ -170,6 +171,7 @@
     <ClInclude Include="..\src\Graphics.h" />
     <ClInclude Include="..\src\GraphicsGroup.h" />
     <ClInclude Include="..\src\InputBox.h" />
+    <ClInclude Include="..\src\KeyboardEventManager.h" />
     <ClInclude Include="..\src\Rectangle.h" />
     <ClInclude Include="..\src\Scene.h" />
     <ClInclude Include="..\src\Settings.h" />
