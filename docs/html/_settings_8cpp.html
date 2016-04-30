@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_settings_8h_source.html">Settings.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_console_8h_source.html">Console.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_exceptions_8h_source.html">Exceptions.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -102,6 +103,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a8cf3c6a707cc85c79cdc6af2e20dad98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_settings_8cpp.html#a8cf3c6a707cc85c79cdc6af2e20dad98">initCGE</a> (int resW, int resH)</td></tr>
 <tr class="memdesc:a8cf3c6a707cc85c79cdc6af2e20dad98"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化Console <a class="el" href="class_graphic.html" title="所有图形的基类 ">Graphic</a> Engine  <a href="#a8cf3c6a707cc85c79cdc6af2e20dad98">More...</a><br /></td></tr>
 <tr class="separator:a8cf3c6a707cc85c79cdc6af2e20dad98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1118f4de4873017da656da1b1dd932b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_settings_8cpp.html#a1118f4de4873017da656da1b1dd932b4">setIgnoreOutOfBoardDraw</a> (bool isIgnore)</td></tr>
+<tr class="separator:a1118f4de4873017da656da1b1dd932b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2515b81fd2071e480a23941aac8e36d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_settings_8cpp.html#af2515b81fd2071e480a23941aac8e36d">setCursorDisplay</a> (bool display)</td></tr>
+<tr class="separator:af2515b81fd2071e480a23941aac8e36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -111,6 +116,8 @@ Variables</h2></td></tr>
 <tr class="separator:ae4085ee78a577924faa13254f42314b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedeffc7d23da25d52b9a50045189fe2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_settings_8cpp.html#aedeffc7d23da25d52b9a50045189fe2b">initialized</a> = false</td></tr>
 <tr class="separator:aedeffc7d23da25d52b9a50045189fe2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb9fa2961b0a16c7eca36decab0066d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_settings_8cpp.html#abdb9fa2961b0a16c7eca36decab0066d">ignoreOutOfBoardDraw</a> = true</td></tr>
+<tr class="separator:abdb9fa2961b0a16c7eca36decab0066d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a8cf3c6a707cc85c79cdc6af2e20dad98"></a>
@@ -176,7 +183,51 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af2515b81fd2071e480a23941aac8e36d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setCursorDisplay </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>display</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1118f4de4873017da656da1b1dd932b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setIgnoreOutOfBoardDraw </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isIgnore</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="abdb9fa2961b0a16c7eca36decab0066d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ignoreOutOfBoardDraw = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aedeffc7d23da25d52b9a50045189fe2b"></a>
 <div class="memitem">
 <div class="memproto">

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rectangle',['Rectangle',['../class_rectangle.html',1,'']]]
+  ['inputbox',['InputBox',['../class_input_box.html',1,'']]]
 ];

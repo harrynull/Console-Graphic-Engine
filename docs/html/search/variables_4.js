@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['r',['r',['../struct_color.html#ab9a9c7134511f9b116a6fcc81a303ba6',1,'Color']]],
-  ['resolutionh',['resolutionH',['../_settings_8cpp.html#ae4085ee78a577924faa13254f42314b9',1,'resolutionH():&#160;Settings.cpp'],['../_settings_8h.html#ae4085ee78a577924faa13254f42314b9',1,'resolutionH():&#160;Settings.cpp']]],
-  ['resolutionw',['resolutionW',['../_settings_8cpp.html#ac9187b07b2abc68c10817d6609202e1d',1,'resolutionW():&#160;Settings.cpp'],['../_settings_8h.html#ac9187b07b2abc68c10817d6609202e1d',1,'resolutionW():&#160;Settings.cpp']]]
+  ['fillwidth',['FillWidth',['../class_textbox.html#a4b9bdfd31fa2901b06158bb8fff16d7a',1,'Textbox']]],
+  ['forecolor',['foreColor',['../struct_pixel_data.html#ac46442ddaa371da6db5872fb639b551c',1,'PixelData']]],
+  ['forward',['forward',['../struct_keyboard_event_manager_1_1_key_event.html#afea05f99f507d8b0ebcecdf1a2b2fa95',1,'KeyboardEventManager::KeyEvent']]]
 ];

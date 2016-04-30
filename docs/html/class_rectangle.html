@@ -103,9 +103,9 @@ Inheritance diagram for Rectangle:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aef0628daf80695acf935f106c2b28a4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rectangle.html#aef0628daf80695acf935f106c2b28a4a">Rectangle</a> (int w, int h, <a class="el" href="struct_color.html">Color</a> color, bool solid=true) noexcept</td></tr>
-<tr class="memdesc:aef0628daf80695acf935f106c2b28a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形的构造函数  <a href="#aef0628daf80695acf935f106c2b28a4a">More...</a><br /></td></tr>
-<tr class="separator:aef0628daf80695acf935f106c2b28a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab03e082ef77b8fbdca4aacc2833dcbee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rectangle.html#ab03e082ef77b8fbdca4aacc2833dcbee">Rectangle</a> (int w, int h, char displayChar, <a class="el" href="struct_color.html">Color</a> foreColor=<a class="el" href="_color_8h.html#a2865abcd6832d8256ea25c42136a9c10">getColorFromColorID</a>(<a class="el" href="_color_8h.html#a9888c9ccfbe9fa6515e967e2d233c3fdab548046646b36c12aa6ba841de500094">White</a>), <a class="el" href="struct_color.html">Color</a> backgroundColor=<a class="el" href="_color_8h.html#a2865abcd6832d8256ea25c42136a9c10">getColorFromColorID</a>(<a class="el" href="_color_8h.html#a9888c9ccfbe9fa6515e967e2d233c3fdab548046646b36c12aa6ba841de500094">White</a>), bool solid=true) noexcept</td></tr>
+<tr class="memdesc:ab03e082ef77b8fbdca4aacc2833dcbee"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形的构造函数  <a href="#ab03e082ef77b8fbdca4aacc2833dcbee">More...</a><br /></td></tr>
+<tr class="separator:ab03e082ef77b8fbdca4aacc2833dcbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae2e4f3395c57fea2b8a334fee9b243e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rectangle.html#aae2e4f3395c57fea2b8a334fee9b243e">~Rectangle</a> ()</td></tr>
 <tr class="separator:aae2e4f3395c57fea2b8a334fee9b243e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a981b8870ce4663fc5594cf091bd5de21"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rectangle.html#a981b8870ce4663fc5594cf091bd5de21">draw</a> (<a class="el" href="class_display_buffer.html">DisplayBuffer</a> &amp;buffer) override</td></tr>
@@ -117,6 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="inherit_header pub_methods_class_graphic"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_graphic')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_graphic.html">Graphic</a></td></tr>
 <tr class="memitem:ab3bbc2327419f52c1e36b626067bf9e1 inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#ab3bbc2327419f52c1e36b626067bf9e1">~Graphic</a> ()</td></tr>
 <tr class="separator:ab3bbc2327419f52c1e36b626067bf9e1 inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b3c1454000af018f3afedd90f2693f inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#ae8b3c1454000af018f3afedd90f2693f">bind</a> (<a class="el" href="class_scene.html">Scene</a> *s)</td></tr>
+<tr class="separator:ae8b3c1454000af018f3afedd90f2693f inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a124ef9d6ca07c4e35ec905ac53ae8840 inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a124ef9d6ca07c4e35ec905ac53ae8840">getX</a> () const </td></tr>
 <tr class="separator:a124ef9d6ca07c4e35ec905ac53ae8840 inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bf5a41ddcc88fbfd4834a8a1d8844db inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a0bf5a41ddcc88fbfd4834a8a1d8844db">setX</a> (int val)</td></tr>
@@ -125,23 +127,43 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac1fbe73f52db2f3d8eaed7dd36fe779f inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dbcd04bb417f8c490d4c304614036c4 inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a0dbcd04bb417f8c490d4c304614036c4">setY</a> (int val)</td></tr>
 <tr class="separator:a0dbcd04bb417f8c490d4c304614036c4 inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae186bd7deb1aa1105797e9949bfb12c3 inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#ae186bd7deb1aa1105797e9949bfb12c3">getTag</a> () const </td></tr>
+<tr class="separator:ae186bd7deb1aa1105797e9949bfb12c3 inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a45a4c241cffff999dc4bc8316994c inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#ac5a45a4c241cffff999dc4bc8316994c">setTag</a> (std::string val)</td></tr>
+<tr class="separator:ac5a45a4c241cffff999dc4bc8316994c inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa64041197ce2483a45ac15e6a2c67829 inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#aa64041197ce2483a45ac15e6a2c67829">getVisibility</a> () const </td></tr>
 <tr class="separator:aa64041197ce2483a45ac15e6a2c67829 inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00c7cf90d6fa05f638d1552efc5d9d32 inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a00c7cf90d6fa05f638d1552efc5d9d32">setVisibility</a> (bool vis)</td></tr>
 <tr class="separator:a00c7cf90d6fa05f638d1552efc5d9d32 inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea0305f759f999f34f9463a5fb912f1 inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a9ea0305f759f999f34f9463a5fb912f1">getFocus</a> () const </td></tr>
+<tr class="separator:a9ea0305f759f999f34f9463a5fb912f1 inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c447596bc3f741648106be937288df7 inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a4c447596bc3f741648106be937288df7">getFocusable</a> () const </td></tr>
+<tr class="separator:a4c447596bc3f741648106be937288df7 inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d439e5020464777255e15712dd77444 inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a6d439e5020464777255e15712dd77444">setFocus</a> (bool focus)</td></tr>
+<tr class="separator:a6d439e5020464777255e15712dd77444 inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e4680bdbe360c8586a09351e336260 inherit pub_methods_class_graphic"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#ad7e4680bdbe360c8586a09351e336260">setFocus</a> (const <a class="el" href="class_graphic.html">Graphic</a> *target, bool focus)</td></tr>
+<tr class="separator:ad7e4680bdbe360c8586a09351e336260 inherit pub_methods_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_graphic"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_graphic')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_graphic.html">Graphic</a></td></tr>
+<tr class="memitem:a5e492b82b926f4339f69074e48ebbdca inherit pro_attribs_class_graphic"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a5e492b82b926f4339f69074e48ebbdca">_tag</a></td></tr>
+<tr class="separator:a5e492b82b926f4339f69074e48ebbdca inherit pro_attribs_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f3ef9ae0aec19a055e0536423527157 inherit pro_attribs_class_graphic"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a4f3ef9ae0aec19a055e0536423527157">_x</a></td></tr>
 <tr class="separator:a4f3ef9ae0aec19a055e0536423527157 inherit pro_attribs_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb2602499cc21a9c61aadf56cff40edb inherit pro_attribs_class_graphic"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#afb2602499cc21a9c61aadf56cff40edb">_y</a></td></tr>
 <tr class="separator:afb2602499cc21a9c61aadf56cff40edb inherit pro_attribs_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5049ad0fc40501c6b9ec0783c741b96 inherit pro_attribs_class_graphic"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#af5049ad0fc40501c6b9ec0783c741b96">_visibility</a> = true</td></tr>
 <tr class="separator:af5049ad0fc40501c6b9ec0783c741b96 inherit pro_attribs_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa287667db5d6a7648305347bc0794740 inherit pro_attribs_class_graphic"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#aa287667db5d6a7648305347bc0794740">_focus</a> = false</td></tr>
+<tr class="separator:aa287667db5d6a7648305347bc0794740 inherit pro_attribs_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88cbf39084837d183bc333943a1732c3 inherit pro_attribs_class_graphic"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a88cbf39084837d183bc333943a1732c3">_focusable</a> = false</td></tr>
+<tr class="separator:a88cbf39084837d183bc333943a1732c3 inherit pro_attribs_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f34eaba3f1f0df32c0987c7cfb9dde inherit pro_attribs_class_graphic"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#aa6f34eaba3f1f0df32c0987c7cfb9dde">_parentScene</a></td></tr>
+<tr class="separator:aa6f34eaba3f1f0df32c0987c7cfb9dde inherit pro_attribs_class_graphic"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aef0628daf80695acf935f106c2b28a4a"></a>
+<a class="anchor" id="ab03e082ef77b8fbdca4aacc2833dcbee"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -163,8 +185,20 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>displayChar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="struct_color.html">Color</a>&#160;</td>
-          <td class="paramname"><em>color</em>, </td>
+          <td class="paramname"><em>foreColor</em> = <code><a class="el" href="_color_8h.html#a2865abcd6832d8256ea25c42136a9c10">getColorFromColorID</a>(<a class="el" href="_color_8h.html#a9888c9ccfbe9fa6515e967e2d233c3fdab548046646b36c12aa6ba841de500094">White</a>)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_color.html">Color</a>&#160;</td>
+          <td class="paramname"><em>backgroundColor</em> = <code><a class="el" href="_color_8h.html#a2865abcd6832d8256ea25c42136a9c10">getColorFromColorID</a>(<a class="el" href="_color_8h.html#a9888c9ccfbe9fa6515e967e2d233c3fdab548046646b36c12aa6ba841de500094">White</a>)</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -190,6 +224,8 @@ Additional Inherited Members</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>宽 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>高 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">foreColor</td><td>前景色 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">backgroundColor</td><td>背景色 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">solid</td><td>是否是实心的 </td></tr>
   </table>
   </dd>

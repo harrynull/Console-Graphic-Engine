@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['scene_2ecpp',['Scene.cpp',['../_scene_8cpp.html',1,'']]],
-  ['scene_2eh',['Scene.h',['../_scene_8h.html',1,'']]],
-  ['settings_2ecpp',['Settings.cpp',['../_settings_8cpp.html',1,'']]],
-  ['settings_2eh',['Settings.h',['../_settings_8h.html',1,'']]]
+  ['keyboardeventmanager_2ecpp',['KeyboardEventManager.cpp',['../_keyboard_event_manager_8cpp.html',1,'']]],
+  ['keyboardeventmanager_2eh',['KeyboardEventManager.h',['../_keyboard_event_manager_8h.html',1,'']]]
 ];

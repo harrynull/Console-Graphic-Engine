@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rectangle_2ecpp',['Rectangle.cpp',['../_rectangle_8cpp.html',1,'']]],
-  ['rectangle_2eh',['Rectangle.h',['../_rectangle_8h.html',1,'']]]
+  ['inputbox_2ecpp',['InputBox.cpp',['../_input_box_8cpp.html',1,'']]],
+  ['inputbox_2eh',['InputBox.h',['../_input_box_8h.html',1,'']]]
 ];

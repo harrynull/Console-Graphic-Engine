@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['rectangle',['Rectangle',['../class_rectangle.html#aef0628daf80695acf935f106c2b28a4a',1,'Rectangle']]],
-  ['resize',['resize',['../class_console.html#ad416f8c15e84a99b5c1c17d0db1672e8',1,'Console']]]
+  ['keyevent',['KeyEvent',['../struct_keyboard_event_manager_1_1_key_event.html#acc85b965d1a4aa15ab818bed709c8c2b',1,'KeyboardEventManager::KeyEvent']]]
 ];

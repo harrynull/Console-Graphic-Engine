@@ -95,17 +95,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8d9819629c960c522e8a08257e8d8c27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a8d9819629c960c522e8a08257e8d8c27">addGraphic</a> (std::shared_ptr&lt; <a class="el" href="class_graphic.html">Graphic</a> &gt; &amp;graphic, int x, int y, std::string tag=&quot;&quot;)</td></tr>
-<tr class="memdesc:a8d9819629c960c522e8a08257e8d8c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加Graphic  <a href="#a8d9819629c960c522e8a08257e8d8c27">More...</a><br /></td></tr>
-<tr class="separator:a8d9819629c960c522e8a08257e8d8c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a969ac43ca295e6726d3c39d7d997b373"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a969ac43ca295e6726d3c39d7d997b373">addGraphic</a> (std::shared_ptr&lt; <a class="el" href="class_graphic.html">Graphic</a> &gt; &amp;&amp;graphic, int x, int y, std::string tag=&quot;&quot;)</td></tr>
-<tr class="separator:a969ac43ca295e6726d3c39d7d997b373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745987fea0487147d7905d4f6b4d358b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a745987fea0487147d7905d4f6b4d358b">addGraphic</a> (std::shared_ptr&lt; <a class="el" href="class_graphic.html">Graphic</a> &gt; &amp;graphic, int x, int y, int layer=0, std::string tag=&quot;&quot;)</td></tr>
+<tr class="memdesc:a745987fea0487147d7905d4f6b4d358b"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加Graphic  <a href="#a745987fea0487147d7905d4f6b4d358b">More...</a><br /></td></tr>
+<tr class="separator:a745987fea0487147d7905d4f6b4d358b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b286c766ef92d2bbe2903c15e50929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a94b286c766ef92d2bbe2903c15e50929">addGraphic</a> (std::shared_ptr&lt; <a class="el" href="class_graphic.html">Graphic</a> &gt; &amp;&amp;graphic, int x, int y, int layer=0, std::string tag=&quot;&quot;)</td></tr>
+<tr class="separator:a94b286c766ef92d2bbe2903c15e50929"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cd6e4522eb0e180bc85405b7277fb65"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_graphic.html">Graphic</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a8cd6e4522eb0e180bc85405b7277fb65">getGraphicByTag</a> (const std::string &amp;tag)</td></tr>
 <tr class="memdesc:a8cd6e4522eb0e180bc85405b7277fb65"><td class="mdescLeft">&#160;</td><td class="mdescRight">查找一个Graphic  <a href="#a8cd6e4522eb0e180bc85405b7277fb65">More...</a><br /></td></tr>
 <tr class="separator:a8cd6e4522eb0e180bc85405b7277fb65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715525e38f85259e0c4121c9417bdb93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a715525e38f85259e0c4121c9417bdb93">reDraw</a> ()</td></tr>
+<tr class="memdesc:a715525e38f85259e0c4121c9417bdb93"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新显示  <a href="#a715525e38f85259e0c4121c9417bdb93">More...</a><br /></td></tr>
+<tr class="separator:a715525e38f85259e0c4121c9417bdb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03847ee63dbc25c702d49ba0e18acdbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a03847ee63dbc25c702d49ba0e18acdbd">flush</a> ()</td></tr>
-<tr class="memdesc:a03847ee63dbc25c702d49ba0e18acdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新显示  <a href="#a03847ee63dbc25c702d49ba0e18acdbd">More...</a><br /></td></tr>
+<tr class="memdesc:a03847ee63dbc25c702d49ba0e18acdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">强行重绘所有显示（可能有闪烁）  <a href="#a03847ee63dbc25c702d49ba0e18acdbd">More...</a><br /></td></tr>
 <tr class="separator:a03847ee63dbc25c702d49ba0e18acdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a875ca6eb968f7c3b48df6d7a1bb8668d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a875ca6eb968f7c3b48df6d7a1bb8668d">getFPS</a> ()</td></tr>
+<tr class="memdesc:a875ca6eb968f7c3b48df6d7a1bb8668d"><td class="mdescLeft">&#160;</td><td class="mdescRight">只刷新修改部分  <a href="#a875ca6eb968f7c3b48df6d7a1bb8668d">More...</a><br /></td></tr>
+<tr class="separator:a875ca6eb968f7c3b48df6d7a1bb8668d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae200eac2c69a1d6a18454cda7767714d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#ae200eac2c69a1d6a18454cda7767714d">addEvent</a> (<a class="el" href="_event_8h.html#a7706d18b7dd23064e367460fe059d5c6">Event</a> e)</td></tr>
+<tr class="separator:ae200eac2c69a1d6a18454cda7767714d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426e0dc0374a1a1a341b3ff31e26897a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a426e0dc0374a1a1a341b3ff31e26897a">addKeyboardEvent</a> (<a class="el" href="struct_keyboard_event_manager_1_1_key_event.html">KeyboardEventManager::KeyEvent</a> k, bool monopolize=false, int priority=0)</td></tr>
+<tr class="separator:a426e0dc0374a1a1a341b3ff31e26897a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a518b0e10b5d277260395a26149bd7597"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#a518b0e10b5d277260395a26149bd7597">setFocus</a> (const <a class="el" href="class_graphic.html">Graphic</a> *target, bool focus)</td></tr>
+<tr class="separator:a518b0e10b5d277260395a26149bd7597"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -115,7 +127,23 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ae2e3636699f69440a38720618c187e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a8d9819629c960c522e8a08257e8d8c27"></a>
+<a class="anchor" id="ae200eac2c69a1d6a18454cda7767714d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::addEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_event_8h.html#a7706d18b7dd23064e367460fe059d5c6">Event</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a745987fea0487147d7905d4f6b4d358b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -140,6 +168,12 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layer</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>tag</em> = <code>&quot;&quot;</code>&#160;</td>
         </tr>
@@ -157,15 +191,16 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="class_graphic.html" title="所有图形的基类 ">Graphic</a></td><td>要加入的Graphic </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>要加入的Graphic在屏幕的X位置 </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>要加入的Graphic在屏幕的Y位置 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>要加入的Graphic的tag(用于查找该Graphic) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tag</td><td>要加入的Graphic的tag(用于查找该Graphic)，注意同一个Scene中tag不能重复 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">layer</td><td>要加入的Graphic的layer, layer大的图形可以覆盖layer小的图形, 相同layer的图形的覆盖顺序无定义 </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>坐标系向上y+,向右x+,Graphic和Scene的原点都在左下角 </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>坐标系向下y+,向右x+,Graphic和Scene的原点都在左上角 </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a969ac43ca295e6726d3c39d7d997b373"></a>
+<a class="anchor" id="a94b286c766ef92d2bbe2903c15e50929"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -190,8 +225,46 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layer</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>tag</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a426e0dc0374a1a1a341b3ff31e26897a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::addKeyboardEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_keyboard_event_manager_1_1_key_event.html">KeyboardEventManager::KeyEvent</a>&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>monopolize</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>priority</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -244,7 +317,25 @@ template&lt;class... Ts&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>刷新显示 </p>
+<p>强行重绘所有显示（可能有闪烁） </p>
+
+</div>
+</div>
+<a class="anchor" id="a875ca6eb968f7c3b48df6d7a1bb8668d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Scene::getFPS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>只刷新修改部分 </p>
+<p>获得当前的fps </p><dl class="section return"><dt>Returns</dt><dd>返回当前的fps </dd></dl>
 
 </div>
 </div>
@@ -270,6 +361,49 @@ template&lt;class... Ts&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>查找到的Graphic的shared_ptr指针，若找不到，返回null指针 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a715525e38f85259e0c4121c9417bdb93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::reDraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>刷新显示 </p>
+
+</div>
+</div>
+<a class="anchor" id="a518b0e10b5d277260395a26149bd7597"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::setFocus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_graphic.html">Graphic</a> *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>focus</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

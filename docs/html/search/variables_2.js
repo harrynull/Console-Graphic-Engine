@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g',['g',['../struct_color.html#adc506c5063609cacdda2c007da3b7a5f',1,'Color']]]
+  ['ch',['ch',['../struct_pixel_data.html#a5f86df242f2867f45b25c5aab38970e8',1,'PixelData']]]
 ];

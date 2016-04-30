@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['_7egraphic',['~Graphic',['../class_graphic.html#ab3bbc2327419f52c1e36b626067bf9e1',1,'Graphic']]],
-  ['_7erectangle',['~Rectangle',['../class_rectangle.html#aae2e4f3395c57fea2b8a334fee9b243e',1,'Rectangle']]]
+  ['print',['print',['../class_console.html#abeaf35b586cd2e5354b2bbed9c551a00',1,'Console']]],
+  ['printchar',['printChar',['../class_console.html#a59a2cb6f110c2f1256badd30ae8b8aaa',1,'Console']]],
+  ['printdisplaybuffer',['printDisplayBuffer',['../class_console.html#a4f1c425f1e8dc0bd3aa827867a3bd65a',1,'Console']]],
+  ['printpixel',['printPixel',['../class_console.html#a852f5b8cbe6a47286d5366207a993eb8',1,'Console']]]
 ];

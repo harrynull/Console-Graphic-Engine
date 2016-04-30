@@ -101,7 +101,10 @@ Inheritance diagram for Graphic:</div>
  <div class="center">
   <img src="class_graphic.png" usemap="#Graphic_map" alt=""/>
   <map id="Graphic_map" name="Graphic_map">
-<area href="class_rectangle.html" alt="Rectangle" shape="rect" coords="0,56,68,80"/>
+<area href="class_graphics_group.html" alt="GraphicsGroup" shape="rect" coords="0,56,98,80"/>
+<area href="class_input_box.html" alt="InputBox" shape="rect" coords="108,56,206,80"/>
+<area href="class_rectangle.html" alt="Rectangle" shape="rect" coords="216,56,314,80"/>
+<area href="class_textbox.html" alt="Textbox" shape="rect" coords="324,56,422,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -115,6 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0b4be4ccd5f49867b4d1181ac3f76ad6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a0b4be4ccd5f49867b4d1181ac3f76ad6">update</a> ()=0</td></tr>
 <tr class="memdesc:a0b4be4ccd5f49867b4d1181ac3f76ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">刷新函数  <a href="#a0b4be4ccd5f49867b4d1181ac3f76ad6">More...</a><br /></td></tr>
 <tr class="separator:a0b4be4ccd5f49867b4d1181ac3f76ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b3c1454000af018f3afedd90f2693f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#ae8b3c1454000af018f3afedd90f2693f">bind</a> (<a class="el" href="class_scene.html">Scene</a> *s)</td></tr>
+<tr class="separator:ae8b3c1454000af018f3afedd90f2693f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a124ef9d6ca07c4e35ec905ac53ae8840"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a124ef9d6ca07c4e35ec905ac53ae8840">getX</a> () const </td></tr>
 <tr class="separator:a124ef9d6ca07c4e35ec905ac53ae8840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bf5a41ddcc88fbfd4834a8a1d8844db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a0bf5a41ddcc88fbfd4834a8a1d8844db">setX</a> (int val)</td></tr>
@@ -123,19 +128,39 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac1fbe73f52db2f3d8eaed7dd36fe779f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dbcd04bb417f8c490d4c304614036c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a0dbcd04bb417f8c490d4c304614036c4">setY</a> (int val)</td></tr>
 <tr class="separator:a0dbcd04bb417f8c490d4c304614036c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae186bd7deb1aa1105797e9949bfb12c3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#ae186bd7deb1aa1105797e9949bfb12c3">getTag</a> () const </td></tr>
+<tr class="separator:ae186bd7deb1aa1105797e9949bfb12c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a45a4c241cffff999dc4bc8316994c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#ac5a45a4c241cffff999dc4bc8316994c">setTag</a> (std::string val)</td></tr>
+<tr class="separator:ac5a45a4c241cffff999dc4bc8316994c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa64041197ce2483a45ac15e6a2c67829"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#aa64041197ce2483a45ac15e6a2c67829">getVisibility</a> () const </td></tr>
 <tr class="separator:aa64041197ce2483a45ac15e6a2c67829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00c7cf90d6fa05f638d1552efc5d9d32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a00c7cf90d6fa05f638d1552efc5d9d32">setVisibility</a> (bool vis)</td></tr>
 <tr class="separator:a00c7cf90d6fa05f638d1552efc5d9d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea0305f759f999f34f9463a5fb912f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a9ea0305f759f999f34f9463a5fb912f1">getFocus</a> () const </td></tr>
+<tr class="separator:a9ea0305f759f999f34f9463a5fb912f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c447596bc3f741648106be937288df7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a4c447596bc3f741648106be937288df7">getFocusable</a> () const </td></tr>
+<tr class="separator:a4c447596bc3f741648106be937288df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d439e5020464777255e15712dd77444"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a6d439e5020464777255e15712dd77444">setFocus</a> (bool focus)</td></tr>
+<tr class="separator:a6d439e5020464777255e15712dd77444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e4680bdbe360c8586a09351e336260"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#ad7e4680bdbe360c8586a09351e336260">setFocus</a> (const <a class="el" href="class_graphic.html">Graphic</a> *target, bool focus)</td></tr>
+<tr class="separator:ad7e4680bdbe360c8586a09351e336260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a5e492b82b926f4339f69074e48ebbdca"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a5e492b82b926f4339f69074e48ebbdca">_tag</a></td></tr>
+<tr class="separator:a5e492b82b926f4339f69074e48ebbdca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f3ef9ae0aec19a055e0536423527157"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a4f3ef9ae0aec19a055e0536423527157">_x</a></td></tr>
 <tr class="separator:a4f3ef9ae0aec19a055e0536423527157"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb2602499cc21a9c61aadf56cff40edb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#afb2602499cc21a9c61aadf56cff40edb">_y</a></td></tr>
 <tr class="separator:afb2602499cc21a9c61aadf56cff40edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5049ad0fc40501c6b9ec0783c741b96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#af5049ad0fc40501c6b9ec0783c741b96">_visibility</a> = true</td></tr>
 <tr class="separator:af5049ad0fc40501c6b9ec0783c741b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa287667db5d6a7648305347bc0794740"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#aa287667db5d6a7648305347bc0794740">_focus</a> = false</td></tr>
+<tr class="separator:aa287667db5d6a7648305347bc0794740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88cbf39084837d183bc333943a1732c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#a88cbf39084837d183bc333943a1732c3">_focusable</a> = false</td></tr>
+<tr class="separator:a88cbf39084837d183bc333943a1732c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f34eaba3f1f0df32c0987c7cfb9dde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic.html#aa6f34eaba3f1f0df32c0987c7cfb9dde">_parentScene</a></td></tr>
+<tr class="separator:aa6f34eaba3f1f0df32c0987c7cfb9dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>所有图形的基类 </p>
@@ -166,6 +191,32 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae8b3c1454000af018f3afedd90f2693f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Graphic::bind </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_scene.html">Scene</a> *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_graphics_group.html#a0b15615d8c47af080bdfdd554e35836f">GraphicsGroup</a>, and <a class="el" href="class_input_box.html#af692a98885731a56cf7f9c03948e5348">InputBox</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af1b6146d88844467db7f4458d0ae1931"></a>
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +248,76 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>将会在update函数之后被调用 </dd></dl>
 
-<p>Implemented in <a class="el" href="class_rectangle.html#a981b8870ce4663fc5594cf091bd5de21">Rectangle</a>.</p>
+<p>Implemented in <a class="el" href="class_rectangle.html#a981b8870ce4663fc5594cf091bd5de21">Rectangle</a>, <a class="el" href="class_input_box.html#a7e10fd6946c86e9fbd744bc37e2cea2c">InputBox</a>, <a class="el" href="class_textbox.html#a89661e6a87cf43a9c345a89ba686ae97">Textbox</a>, and <a class="el" href="class_graphics_group.html#a7489b2457bec349f5e6093a35f14d740">GraphicsGroup</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ea0305f759f999f34f9463a5fb912f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graphic::getFocus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4c447596bc3f741648106be937288df7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graphic::getFocusable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae186bd7deb1aa1105797e9949bfb12c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Graphic::getTag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -259,6 +379,90 @@ Protected Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6d439e5020464777255e15712dd77444"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphic::setFocus </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>focus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad7e4680bdbe360c8586a09351e336260"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Graphic::setFocus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_graphic.html">Graphic</a> *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>focus</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_graphics_group.html#a77ddd1472f41e75e30bda4aa62399eb2">GraphicsGroup</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac5a45a4c241cffff999dc4bc8316994c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graphic::setTag </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -366,11 +570,91 @@ Protected Attributes</h2></td></tr>
 <p>刷新函数 </p>
 <dl class="section note"><dt>Note</dt><dd>每帧调用一次，将在draw函数之前被调用 </dd></dl>
 
-<p>Implemented in <a class="el" href="class_rectangle.html#a7218c05d6c735aa28c0e1d1c6d180f40">Rectangle</a>.</p>
+<p>Implemented in <a class="el" href="class_rectangle.html#a7218c05d6c735aa28c0e1d1c6d180f40">Rectangle</a>, <a class="el" href="class_input_box.html#acb50780ed9b9fde46e11f631e01aeb26">InputBox</a>, <a class="el" href="class_textbox.html#a52d288e4583c21db22c231d54d599b37">Textbox</a>, and <a class="el" href="class_graphics_group.html#a6d65f32dad1de7cb584797c700f66d2c">GraphicsGroup</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aa287667db5d6a7648305347bc0794740"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graphic::_focus = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a88cbf39084837d183bc333943a1732c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graphic::_focusable = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa6f34eaba3f1f0df32c0987c7cfb9dde"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_scene.html">Scene</a>* Graphic::_parentScene</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5e492b82b926f4339f69074e48ebbdca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Graphic::_tag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af5049ad0fc40501c6b9ec0783c741b96"></a>
 <div class="memitem">
 <div class="memproto">
