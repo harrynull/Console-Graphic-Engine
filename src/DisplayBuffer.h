@@ -42,7 +42,7 @@ public:
 	* 6 7 8
 	*/
 	DisplayBuffer(int w, int h)
-		:_w(w), _h(h), _buffer(new unsigned char[w*h * 7]) {
+		:_w(w), _h(h), _offsetX(0), _offsetY(0), _buffer(new unsigned char[w*h * 7]) {
 		clear();
 	};
 

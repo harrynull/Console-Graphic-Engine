@@ -85,3 +85,15 @@ double Scene::getFPS()
 void Scene::addEvent(Event e) {
 	events.emplace_back(e);
 }
+
+void Scene::addKeyboardEvent(KeyboardEventManager::KeyEvent k, bool monopolize, int priority)
+{
+	kem.bind(k, monopolize, priority);
+}
+
+void Scene::setFocus(const Graphic * target, bool focus)
+{
+	for (auto iter = _graphics.begin(); iter != _graphics.end(); ++iter) {
+		iter->second->setFocus(target, focus);
+	}
+}

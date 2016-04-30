@@ -42,22 +42,16 @@ public:
 	void setVisibility(bool vis) { _visibility = vis; }
 	bool getFocus() const { return _focus; }
 	bool getFocusable() const { return _focusable; }
-	void setFocus(bool focus) {
+	void setFocus(bool focus)
+	{
 		if (!_parentScene) throw NOT_BINDED_YET();
 		if (!_focusable) return;
-		for (auto iter = _parentScene->getGraphicsBegin();
-		iter != _parentScene->getGraphicsEnd(); ++iter) {
-			if (focus)
-			{
-				if (iter->second->_tag != _tag) iter->second->_focus = false;
-				else iter->second->_focus = true;
-			}
-			else {
-				iter->second->_focus = false;
-			}
-		}
+		_parentScene->setFocus(this, focus);
 	}
-
+	virtual void setFocus(const Graphic* target, bool focus)
+	{
+		_focus = (focus && target == this);
+	}
 protected:
 	std::string _tag;
 	int _x, _y;

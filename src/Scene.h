@@ -55,16 +55,10 @@ public:
 
 	void addEvent(Event e);
 
-	void addKeyboardEvent(KeyboardEventManager::KeyEvent k, bool monopolize = false, int priority = 0) {
-		kem.bind(k, monopolize, priority);
-	}
+	void addKeyboardEvent(KeyboardEventManager::KeyEvent k, bool monopolize = false, int priority = 0);
 
-	auto getGraphicsBegin() {
-		return _graphics.begin();
-	}
-	auto getGraphicsEnd() {
-		return _graphics.end();
-	}
+	void setFocus(const Graphic* target, bool focus);
+
 private:
 	DisplayBuffer buffer;
 	std::multimap<int, std::shared_ptr<Graphic>> _graphics;

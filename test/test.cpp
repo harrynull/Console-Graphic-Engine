@@ -13,16 +13,19 @@ int main()
 	g->add(std::make_shared<Textbox>("Test1", Textbox::FillWidth), 12, 12, 3, "fps");
 	g->add(std::make_shared<InputBox>(5, false, -1, getColorFromColorID(Green)), 2, 2, 3, "inp");
 	mainScene->addGraphic(g, 0, 0, 0, "g");
-	g->getGraphicByTag("inp")->setFocus(true);
-	mainScene->addEvent(Event([&]()->bool {
-		switch (Console::getchar()) {
-		case 'w':g->getGraphicByTag("test")->setY(g->getGraphicByTag("test")->getY() - 1); break;
-		case 'a':g->getGraphicByTag("test")->setX(g->getGraphicByTag("test")->getX() - 1); break;
-		case 's':g->getGraphicByTag("test")->setY(g->getGraphicByTag("test")->getY() + 1); break;
-		case 'd':g->getGraphicByTag("test")->setX(g->getGraphicByTag("test")->getX() + 1); break;
-		}
-		return false;
-	}));
+	auto test = g->getGraphicByTag("test");
+	mainScene->addKeyboardEvent({
+		[test](char)->bool {test->setY(test->getY() - 1); return false;
+	}, std::string("w")});
+	mainScene->addKeyboardEvent({
+		[test](char)->bool {test->setX(test->getX() - 1); return false;
+	}, std::string("a") });
+	mainScene->addKeyboardEvent({
+		[test](char)->bool {test->setY(test->getY() + 1); return false;
+	}, std::string("s") });
+	mainScene->addKeyboardEvent({
+		[test](char)->bool {test->setX(test->getX() + 1); return false;
+	}, std::string("d") });
 	while (true)
 	{
 		std::stringstream ss;

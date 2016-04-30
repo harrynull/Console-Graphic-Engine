@@ -20,9 +20,10 @@ public:
 	void setText(std::string text) { _text = text; }
 	std::string getText() { return _text; }
 
-	virtual void bind(Scene* s) override {
+	virtual void bind(Scene* s) override
+	{
 		_parentScene = s;
-		KeyboardEvent k{
+		_parentScene->addKeyboardEvent({
 			[this](char ch)->bool {
 			if (!_focus) return false;
 			switch (ch) {
@@ -37,10 +38,8 @@ public:
 				break;
 			}
 			return true;
-		}
-		};
-		KeyboardEventManager::KeyEvent ke(k, std::string(""), true);
-		_parentScene->addKeyboardEvent(ke, true, 0);
+		}, std::string("")/*转发内容*/, true/*完全转发*/
+		}, true/*独占*/, 0/*优先级*/);
 	}
 
 private:
